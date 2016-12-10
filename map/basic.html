@@ -43,68 +43,77 @@
   <script src="../src/data-series.js"></script>
   <script src="../src/proj.js"></script>
   <script src="../src/map.js"></script>
-
   <script src="assets/jquery-jvectormap-world-mill-en.js"></script>
- 
-
   <script>
 
-
-
-
-    //jQuery.noConflict();
-
     $(document).ready(function() {
-    $("#start").fadeIn(2000);
+      
+    $("#start1").fadeIn(2000);
+    $("#start1").delay(2000).fadeOut(400);
+    $("#start2").delay(3800).fadeIn();
+    $("#Eric").delay(3900).fadeIn();
+    $("#Asfand").delay(3900).fadeIn();
+    $("#Zainab").delay(3910).fadeIn();
+    $("#Silva").delay(3900).fadeIn();
+    $("#Michael").delay(3900).fadeIn();
+    $("#start3").delay(6000).fadeIn();
+    $("#start2").delay(4000).fadeOut();
+    $("#start3").delay(2000).fadeOut();
+    $("#start4").delay(9000).fadeIn();
+    $("#start4").delay(2500).fadeOut();
+    $("#start5").delay(12000).fadeIn();
+    $("#start6").delay(14000).fadeIn();
+    $("#start7").delay(15000).fadeIn();
+    $("#start8").delay(16000).fadeIn();
+    $("#Silva").delay(8100).fadeOut();
+    $("#Zainab").delay(10100).fadeOut();
+    $("#Asfand").delay(11100).fadeOut();
+    $("#Eric").delay(12100).fadeOut();
+    $("#Michael").delay(13100).fadeOut();
+    $("#start5").delay(7000).fadeOut();
+    $("#start6").delay(5000).fadeOut();
+    $("#start7").delay(4000).fadeOut();
+    $("#start8").delay(3000).fadeOut();
 
-    $("#start").delay(4000).fadeOut(400);
 });
 
+
+// $(document).ready(function() {
+
+// });
+
 $(document).ready(function() {
-$("#blurbutton").delay(4000).fadeIn(200);
-$(".phantom").delay(4000).fadeIn(200);
-    $("#map1").delay(4000).fadeIn(400);
-              $("#map1").css({"-webkit-filter" : "blur(5px)"});
+  $("#map1").delay(24000).fadeIn(200);
+  $("#map1").css({"-webkit-filter" : "blur(5px)"});
+// });
 
+// $(document).ready(function() {
+$(".phantom").fadeIn(200);
+// $("#blurbutton").delay(24000).fadeIn(200).css({"display" : "inline-block"});
+$("#guide").delay(24000).fadeIn(200);
+$("#start9").delay(20000).fadeIn(200);
+$("#start10").delay(20000).fadeIn(200);
+$("#start9").delay(4000).fadeOut(200);
+$("#start10").delay(4000).fadeOut(200);
 
-    $('.phantom').click(function(){
+$('.phantom').click(function(){
       $('.popImage').fadeOut();
       $(this).fadeOut();
       $("#blurbutton").fadeOut();
+      $("#start9").fadeOut();
+      $("#start10").fadeOut();
       $("#map1").css({"-webkit-filter" : "blur(0px)"});
       $("#guide").fadeIn(200);
-
+      $("#guide").css({"display" : "inline-block"});
     });
   });
-
-
-
-var mouseX;
-var mouseY;
-$(document).mousemove( function(e) {
-   mouseX = e.pageX; 
-   mouseY = e.pageY;
-});  
 
 
 function showMap(){
     jQuery(function(){
 
       var $ = jQuery;
-      
 
-      // $('#focus-single').click(function(){
-      //   $('#map1').vectorMap('set', 'focus', {region: 'AU', animate: true});
-      // });
-      // $('#focus-multiple').click(function(){
-      //   $('#map1').vectorMap('set', 'focus', {regions: ['AU', 'JP'], animate: true});
-      // });
-      // $('#focus-coords').click(function(){
-      //   $('#map1').vectorMap('set', 'focus', {scale: 1, lat: 35, lng: 33, animate: true});
-      // });
-      // $('#focus-init').click(function(){
-      //   $('#map1').vectorMap('set', 'focus', {scale: 1, x: 1, y: 1, animate: true});
-      // });
       $('#map1').vectorMap({
         map: 'world_mill_en',
         zoomButtons : false,
@@ -117,40 +126,14 @@ function showMap(){
           scale: 1,
           animate: true
         },
-        // regionsSelectableOne: true,
 
 
         onRegionClick: function(event, code) 
                 {
 
-                  
-//  $('.closeButton').click(function () {
-//     $('#popImageCA').hide();
+//   $('.phantom').click(function () {
+//     $(this).fadeOut();
 // });
-// if (code === 'CA') { 
- 
-//     $('#popImageCA').fadeIn("fast");
-//     $('#popImageCA').css('top', '20%');
-//     $('#popImageCA').css('left', '15%');
-//      e.stopPropagation();
-  
-// } else if (code !== 'CA'){
-//     $('#popImageCA').fadeOut("fast");
-//   }
-//POLAND
-//   $('.closeButton').click(function () {
-//     $('#popImagePL').hide();
-// });
-
-  
-
-// if (code === 'PL') { 
-
-// }
-
-  $('.phantom').click(function () {
-    $(this).fadeOut();
-});
 
   
 if (code === 'PL') { 
@@ -267,34 +250,34 @@ if (code === 'TW') {
                 },
         series: {
           regions: [{
-            scale: [ '#7D0541'],
+            backgroundColor:  "#C1ECFA",
+            scale: [ '#402E21', '#F7CCAA'],
             normalizeFunction: 'polynomial',
             values: {
              
-              "BR": 427.24,
+              "BR": 300.24,
 
 
              
-               "CN": 5745.13,
+               "CN": 700,
               
                "ET": 30.94,
               
-              // "FR": 2555.44,
             
-               "ID": 1430.02,
+               "ID": 300,
              
-               "KR": 986.26,
-               "MD": 4646.34,
+               "KR": 1100,
+               "MD": 1400,
                "PK": 174.79,
              
                "PH": 189.06,
-               "PL": 438.88,
+               "PL": 1300,
              
                "RU": 1476.91,
                
-               "US": 14624.18,
-               "TW": 846.33,
-               "TZ": 14624.18,
+               "US": 500,
+               "TW": 650,
+               "TZ": 50,
              
              }
           }]
@@ -313,7 +296,7 @@ if (code === 'TW') {
     })
 }
 
-setTimeout(showMap, 4100);
+setTimeout(showMap, 25000);
 
 $(document).ready(function() {
 
@@ -506,26 +489,18 @@ $(".hoverable").hover(function() {
     $("#textUS3").text("BRIAN FROM USA");
     $("#textMD1").text("IULIAN FROM MOLDOVA");
 
-// }, function() {
-//           $("#textPL1").text("");
-//       });
-// // $(".hoverable").hover(function() {
-// //           $(this).animate({ opacity: '0.4'}, { duration: 200,});
-// //         }, function() {
-// //           $(this).animate({ opacity: '1' }, { duration: 200,});
-// //       });
+    $("#start2").text("Our beauty standards are more and more stringent for men and women,");
+    $("#start3").text("especially regarding skin color.");
+    $("#start4").text("This is not just a matter of beauty.");
+    $("#start5").text("Skin tone can affects a person's chances of:");
+    $("#start6").text("getting a job, ");
+    $("#start7").text("getting married, ");
+    $("#start8").text("or simply being respected.");
+    $("#start9").text("We asked people from around the world about the  skin color expectation in their countries.");
+    $("#start10").text("Here's what we got.");
 
-// $("#PL2").hover(function() {
-//   $("#textPL2").text("KONRAD \n FROM POLAND");
-// });
+
 });
-
-
-
-
-//STARTING FADE
-
-
 
 
   </script>
@@ -533,130 +508,147 @@ $(".hoverable").hover(function() {
 <body>
 
 
-<img src="SKINP.png" id="start">
-<!--   <div style="height: 400px"></div> -->
-  <div id="map1" style="width: 100%; height: 100vh; padding:0;
+<img src="SKINP.png" id="start1">
+<div class="start" id="start2"></div>
+<div class="start" id="start3"></div>
+<div class="start" id="start4"></div>
+<div class="start" id="start5"></div>
+<div class="start" id="start6"></div>
+<div class="start" id="start7"></div>
+<div class="start" id="start8"></div>
+
+
+
+
+<div id="map1" style="width: 100%; height: 100vh; padding:0;
     margin:0;
     float: left; "></div>
-    <div class="phantom"></div>
-    <div id="blurbutton">explore beauty ideals all over the world </div>
-    <div id="guide">click purple</div>
+
+        <div class="phantom"></div>
+ <div id="wrapper" style="text-align: center">  
+    <div class="start" id="blurbutton">click to see videos</div>
+    <div class="start" id="guide">click on a country to watch</div>
+    <div class="start" id="start9"></div>
+<div class="start" id="start10"></div>
+</div>
+
+
+<img src="images/EricT.png" class="startImage" id="Eric">
+<img src="images/MichaelT.png" class="startImage" id="Michael">
+<img src="images/ZainabT.png" class="startImage" id="Zainab">
+<img src="images/SilvanusT.png" class="startImage" id="Silva">
+<img src="images/AsfandT.png" class="startImage" id="Asfand">
+
+
+  
 
 
 
 <div class= "popImage" id="popImagePL">
 <span id="PL1" ><img src="images/Gabriela.png" class="hoverable">
-<p id = "textPL1" align="center"></p>
+<p class="videoText" id = "textPL1" align="center"></p>
 </span>
 <span id="PL2" ><img src = "images/Konrad.png" class="hoverable">
-<p id = "textPL2" align="center"></p>
+<p class="videoText" id = "textPL2" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImageUS">
 <span id="US1" ><img src="images/Agnes.png" class="hoverable">
-<p id = "textUS1" align="center"></p>
+<p class="videoText" id = "textUS1" align="center"></p>
 </span>
 <span id="US2" ><img src = "images/Henry.png" class="hoverable">
-<p id = "textUS2" align="center"></p>
+<p class="videoText" id = "textUS2" align="center"></p>
 </span>
 <span id="US3" ><img src = "images/Brian.png" class="hoverable">
-<p id = "textUS3" align="center"></p>
+<p class="videoText" id = "textUS3" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImagePK">
 <span id="PK1" ><img src="images/Asfand.png" class="hoverable">
-<p id = "textPK1" align="center"></p>
+<p class="videoText" id = "textPK1" align="center"></p>
 </span>
 <span id="PK2" ><img src = "images/Haider.png" class="hoverable">
-<p id = "textPK2" align="center"></p>
+<p class="videoText" id = "textPK2" align="center"></p>
 </span>
 <span id="PK3" ><img src = "images/Zainab.png" class="hoverable">
-<p id = "textPK3" align="center"></p>
+<p class="videoText" id = "textPK3" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImageKR">
 <span id="KR1" ><img src="images/Eric.png" class="hoverable">
-<p id = "textKR1" align="center"></p>
+<p class="videoText" id = "textKR1" align="center"></p>
 </span>
-<!-- <span id="US2" ><img src = "images/Henry.png" class="hoverable">
-</span> -->
 </div>
 
 <div class= "popImage" id="popImageET">
 <span id="ET1" ><img src="images/Michael.png" class="hoverable">
-<p id = "textET1" align="center"></p>
+<p class="videoText" id = "textET1" align="center"></p>
 </span>
-<!-- <span id="US2" ><img src = "images/Henry.png" class="hoverable">
-</span> -->
 </div>
 
 <div class= "popImage" id="popImageTZ">
 <span id="TZ1" ><img src="images/Silva.png" class="hoverable">
-<p id = "textTZ1" align="center"></p>
+<p class="videoText" id = "textTZ1" align="center"></p>
 </span>
-<!-- <span id="US2" ><img src = "images/Henry.png" class="hoverable">
-</span> -->
 </div>
 
 <div class= "popImage" id="popImageRU">
 <span id="RU1" ><img src="images/Olesya.png" class="hoverable">
-<p id = "textRU1" align="center"></p>
+<p class="videoText" id = "textRU1" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImageCN">
 <span id="CN1" ><img src="images/Olivia.png" class="hoverable">
-<p id = "textCN1" align="center"></p>
+<p class="videoText" id = "textCN1" align="center"></p>
 </span>
 <span id="CN2" ><img src="images/Henry.png" class="hoverable">
-<p id = "textCN2" align="center"></p>
+<p class="videoText" id = "textCN2" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImagePH">
 <span id="PH1" ><img src="images/Agnes.png" class="hoverable">
-<p id = "textPH1" align="center"></p>
+<p class="videoText" id = "textPH1" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImageBR">
 <span id="BR1" ><img src="images/Konig.png" class="hoverable">
-<p id = "textBR1" align="center"></p>
+<p class="videoText" id = "textBR1" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImageID">
 <span id="ID1" ><img src="images/Carlo.png" class="hoverable">
-<p id = "textID1" align="center"></p>
+<p class="videoText" id = "textID1" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImageMD">
 <span id="MD1" ><img src="images/Iulian.png" class="hoverable">
-<p id = "textMD1" align="center"></p>
+<p class="videoText" id = "textMD1" align="center"></p>
 </span>
 </div>
 
 <div class= "popImage" id="popImageTW">
 <span id="TW1" ><img src="images/Konig.png" class="hoverable">
-<p id = "textTW1" align="center"></p>
+<p class="videoText" id = "textTW1" align="center"></p>
 </span>
 </div>
 
 
 
-   <button id="button1">X</button>
      <div id="player">
        <video id="vid" width="100%" height="100%" controls >
-
-
-
-
   </video>
      </div>
+
+        <button id="button1">X</button>
+
      
 </body>
 </html>
