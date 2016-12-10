@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Skin pressure</title>
+  <link rel="stylesheet" media="all" href="../jquery-jvectormap.css"/>
+  <script src="assets/jquery-1.8.2.js"></script>
+  <script src="../jquery-jvectormap.js"></script>
+  <script src="../lib/jquery-mousewheel.js"></script>
+
+  <script src="../src/jvectormap.js"></script>
+
+  <script src="../src/abstract-element.js"></script>
+  <script src="../src/abstract-canvas-element.js"></script>
+  <script src="../src/abstract-shape-element.js"></script>
+
+  <script src="../src/svg-element.js"></script>
+  <script src="../src/svg-group-element.js"></script>
+  <script src="../src/svg-canvas-element.js"></script>
+  <script src="../src/svg-shape-element.js"></script>
+  <script src="../src/svg-path-element.js"></script>
+  <script src="../src/svg-circle-element.js"></script>
+  <script src="../src/svg-image-element.js"></script>
+  <script src="../src/svg-text-element.js"></script>
+
+  <script src="../src/vml-element.js"></script>
+  <script src="../src/vml-group-element.js"></script>
+  <script src="../src/vml-canvas-element.js"></script>
+  <script src="../src/vml-shape-element.js"></script>
+  <script src="../src/vml-path-element.js"></script>
+  <script src="../src/vml-circle-element.js"></script>
+  <script src="../src/vml-image-element.js"></script>
+
+  <script src="../src/map-object.js"></script>
+  <script src="../src/region.js"></script>
+  <script src="../src/marker.js"></script>
+
+  <script src="../src/vector-canvas.js"></script>
+  <script src="../src/simple-scale.js"></script>
+  <script src="../src/ordinal-scale.js"></script>
+  <script src="../src/numeric-scale.js"></script>
+  <script src="../src/color-scale.js"></script>
+  <script src="../src/legend.js"></script>
+  <script src="../src/data-series.js"></script>
+  <script src="../src/proj.js"></script>
+  <script src="../src/map.js"></script>
+
+  <script src="assets/jquery-jvectormap-world-mill-en.js"></script>
+ 
+
+  <script>
+
+
+
+
+    //jQuery.noConflict();
+
+    $(document).ready(function() {
+    $("#start").fadeIn(2000);
+
+    $("#start").delay(4000).fadeOut(400);
+});
+
+$(document).ready(function() {
+$("#blurbutton").delay(4000).fadeIn(200);
+$(".phantom").delay(4000).fadeIn(200);
+    $("#map1").delay(4000).fadeIn(400);
+              $("#map1").css({"-webkit-filter" : "blur(5px)"});
+
+
+    $('.phantom').click(function(){
+      $('.popImage').fadeOut();
+      $(this).fadeOut();
+      $("#blurbutton").fadeOut();
+      $("#map1").css({"-webkit-filter" : "blur(0px)"});
+      $("#guide").fadeIn(200);
+
+    });
+  });
+
+
+
+var mouseX;
+var mouseY;
+$(document).mousemove( function(e) {
+   mouseX = e.pageX; 
+   mouseY = e.pageY;
+});  
+
+
+function showMap(){
+    jQuery(function(){
+
+      var $ = jQuery;
+      
+
+      // $('#focus-single').click(function(){
+      //   $('#map1').vectorMap('set', 'focus', {region: 'AU', animate: true});
+      // });
+      // $('#focus-multiple').click(function(){
+      //   $('#map1').vectorMap('set', 'focus', {regions: ['AU', 'JP'], animate: true});
+      // });
+      // $('#focus-coords').click(function(){
+      //   $('#map1').vectorMap('set', 'focus', {scale: 1, lat: 35, lng: 33, animate: true});
+      // });
+      // $('#focus-init').click(function(){
+      //   $('#map1').vectorMap('set', 'focus', {scale: 1, x: 1, y: 1, animate: true});
+      // });
+      $('#map1').vectorMap({
+        map: 'world_mill_en',
+        zoomButtons : false,
+        zoomOnScroll: false,
+        backgroundColor:  "#C1ECFA",
+        panOnDrag: true,
+        focusOn: {
+          x: 0.5,
+          y: 0.5,
+          scale: 1,
+          animate: true
+        },
+        // regionsSelectableOne: true,
+
+
+        onRegionClick: function(event, code) 
+                {
+
+                  
+//  $('.closeButton').click(function () {
+//     $('#popImageCA').hide();
+// });
+// if (code === 'CA') { 
+ 
+//     $('#popImageCA').fadeIn("fast");
+//     $('#popImageCA').css('top', '20%');
+//     $('#popImageCA').css('left', '15%');
+//      e.stopPropagation();
+  
+// } else if (code !== 'CA'){
+//     $('#popImageCA').fadeOut("fast");
+//   }
+//POLAND
+//   $('.closeButton').click(function () {
+//     $('#popImagePL').hide();
+// });
+
+  
+
+// if (code === 'PL') { 
+
+// }
+
+  $('.phantom').click(function () {
+    $(this).fadeOut();
+});
+
+  
+if (code === 'PL') { 
+    $(".phantom").fadeIn();
+    $('#popImagePL').delay(100).fadeIn("fast");
+    $('#popImagePL').css('top', '36%');
+    $('#popImagePL').css('left', '52%');
+     e.stopPropagation();
+  
+} 
+
+  if (code === 'US') { 
+    $(".phantom").fadeIn();
+    $('#popImageUS').delay(100).fadeIn("fast");
+    $('#popImageUS').css('top', '40%');
+    $('#popImageUS').css('left', '25%');
+     e.stopPropagation();
+  
+} 
+
+if (code === 'PK') { 
+    $(".phantom").fadeIn();
+    $('#popImagePK').delay(100).fadeIn("fast");
+    $('#popImagePK').css('top', '50%');
+    $('#popImagePK').css('left', '40%');
+     e.stopPropagation();
+} 
+
+if (code === 'KR') { 
+    $(".phantom").fadeIn();
+    $('#popImageKR').delay(100).fadeIn("fast");
+    $('#popImageKR').css('top', '45%');
+    $('#popImageKR').css('left', '80%');
+     e.stopPropagation();
+} 
+
+if (code === 'ET') { 
+    $(".phantom").fadeIn();
+    $('#popImageET').delay(100).fadeIn("fast");
+    $('#popImageET').css('top', '60%');
+    $('#popImageET').css('left', '58%');
+     e.stopPropagation();
+} 
+
+if (code === 'TZ') { 
+    $(".phantom").fadeIn();
+    $('#popImageTZ').delay(100).fadeIn("fast");
+    $('#popImageTZ').css('top', '68%');
+    $('#popImageTZ').css('left', '57%');
+     e.stopPropagation();
+} 
+
+if (code === 'RU') { 
+    $(".phantom").fadeIn();
+    $('#popImageRU').delay(100).fadeIn("fast");
+    $('#popImageRU').css('top', '32%');
+    $('#popImageRU').css('left', '60%');
+     e.stopPropagation();
+} 
+
+if (code === 'CN') { 
+    $(".phantom").fadeIn();
+    $('#popImageCN').delay(100).fadeIn("fast");
+    $('#popImageCN').css('top', '50%');
+    $('#popImageCN').css('left', '55%');
+     e.stopPropagation();
+} 
+
+if (code === 'PH') { 
+    $(".phantom").fadeIn();
+    $('#popImagePH').delay(100).fadeIn("fast");
+    $('#popImagePH').css('top', '55%');
+    $('#popImagePH').css('left', '80%');
+     e.stopPropagation();
+} 
+
+if (code === 'BR') { 
+    $(".phantom").fadeIn();
+    $('#popImageBR').delay(100).fadeIn("fast");
+    $('#popImageBR').css('top', '60%');
+    $('#popImageBR').css('left', '30%');
+     e.stopPropagation();
+} 
+
+if (code === 'MD') { 
+    $(".phantom").fadeIn();
+    $('#popImageMD').delay(100).fadeIn("fast");
+    $('#popImageMD').css('top', '40%');
+    $('#popImageMD').css('left', '57%');
+     e.stopPropagation();
+} 
+
+if (code === 'ID') { 
+    $(".phantom").fadeIn();
+    $('#popImageID').delay(100).fadeIn("fast");
+    $('#popImageID').css('top', '65%');
+    $('#popImageID').css('left', '80%');
+     e.stopPropagation();
+} 
+
+if (code === 'TW') { 
+    $(".phantom").fadeIn();
+    $('#popImageTW').delay(100).fadeIn("fast");
+    $('#popImageTW').css('top', '55%');
+    $('#popImageTW').css('left', '80%');
+     e.stopPropagation();
+} 
+
+
+
+
+
+ 
+                },
+        series: {
+          regions: [{
+            scale: [ '#7D0541'],
+            normalizeFunction: 'polynomial',
+            values: {
+             
+              "BR": 427.24,
+
+
+             
+               "CN": 5745.13,
+              
+               "ET": 30.94,
+              
+              // "FR": 2555.44,
+            
+               "ID": 1430.02,
+             
+               "KR": 986.26,
+               "MD": 4646.34,
+               "PK": 174.79,
+             
+               "PH": 189.06,
+               "PL": 438.88,
+             
+               "RU": 1476.91,
+               
+               "US": 14624.18,
+               "TW": 846.33,
+               "TZ": 14624.18,
+             
+             }
+          }]
+        }
+      });
+
+  $("#button1").click(function() {
+    $("#guide").fadeIn();
+      $("#player").fadeOut();
+      $(this).fadeOut();
+      $(".popImage").hide();
+      $(".phantom").hide();
+      $("#vid")[0].pause();
+
+    });
+    })
+}
+
+setTimeout(showMap, 4100);
+
+$(document).ready(function() {
+
+$('.popImage').click(function () {
+  $("#guide").fadeOut();
+});
+
+$('#PL1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Gabriela Naumnik from Poland.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+       $("#vid")[0].play();
+});
+
+$('#PL2').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Konrad Krawczyk from Poland.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+
+$('#US1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Agnes Santiano from United States.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#US2').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Henry Liu from United States.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#US3').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Brian Leichus from United States.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#PK1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Asfand Yar Khan Tareen.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#PK2').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Haider Ali from Pakistan.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#PK3').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Zainab Rubab Haider from Pakistan.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#KR1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Eric Shin from South Korea.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#ET1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Michael Benkson Dinku from Ethiopia.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#TZ1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Silvanus Kaserwa from Tanzania.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#CN1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Olivia Wan from China.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#CN2').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Henry Liu from China.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#RU1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Olesya Ermilova from Russia .mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#PH1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Agnes Santiano from the Philippines.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+//new ones
+
+$('#BR1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Konig Chen from Brazil.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#ID1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Carlo Gabriel from Indonesia.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#MD1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Iulian Mitrea from Moldova.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+$('#TW1').click(function () {
+    $("#button1").fadeIn();
+    $('#player').fadeIn();
+    $("#vid").html('<source src="videos/Konig Chen from Taiwan.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+      $("#vid")[0].play();
+});
+
+
+
+
+$(".hoverable").hover(function() {
+          $(this).animate({ opacity: '0.4'}, { duration: 200,});
+        }, function() {
+          $(this).animate({ opacity: '1' }, { duration: 200,});
+      });
+// $("#PL1").hover(function() {
+    $("#textPL1").text("GABRIELA FROM POLAND");
+    $("#textPL2").text("KONRAD FROM POLAND");
+    $("#textET1").text("MICHAEL FROM ETHIOPIA");
+    $("#textCN1").text("OLIVIA FROM CHINA");
+    $("#textCN2").text("HENRY FROM CHINA");
+    $("#textKR1").text("ERIC FROM SOUTH KOREA");
+    $("#textPK1").text("ASFAND FROM PAKISTAN");
+    $("#textPK2").text("HAIDER FROM PAKISTAN");
+    $("#textPK3").text("ZAINAB FROM PAKISTAN");
+    $("#textPH1").text("AGNES FROM PHILIPPINES");
+    $("#textRU1").text("OLESYA FROM RUSSIA");
+    $("#textTZ1").text("SILVANUS FROM TANZANIA");
+    $("#textUS1").text("AGNES FROM USA");
+    $("#textUS2").text("HENRY FROM USA");
+    $("#textUS3").text("BRIAN FROM USA");
+    $("#textBR1").text("KONIG FROM BRAZIL");
+    $("#textTW1").text("KONIG FROM TAIWAN");
+    $("#textID1").text("CARLO FROM INDONESIA");
+    $("#textUS3").text("BRIAN FROM USA");
+    $("#textMD1").text("IULIAN FROM MOLDOVA");
+
+// }, function() {
+//           $("#textPL1").text("");
+//       });
+// // $(".hoverable").hover(function() {
+// //           $(this).animate({ opacity: '0.4'}, { duration: 200,});
+// //         }, function() {
+// //           $(this).animate({ opacity: '1' }, { duration: 200,});
+// //       });
+
+// $("#PL2").hover(function() {
+//   $("#textPL2").text("KONRAD \n FROM POLAND");
+// });
+});
+
+
+
+
+//STARTING FADE
+
+
+
+
+  </script>
+</head>
+<body>
+
+
+<img src="SKINP.png" id="start">
+<!--   <div style="height: 400px"></div> -->
+  <div id="map1" style="width: 100%; height: 100vh; padding:0;
+    margin:0;
+    float: left; "></div>
+    <div class="phantom"></div>
+    <div id="blurbutton">explore beauty ideals all over the world </div>
+    <div id="guide">click purple</div>
+
+
+
+<div class= "popImage" id="popImagePL">
+<span id="PL1" ><img src="images/Gabriela.png" class="hoverable">
+<p id = "textPL1" align="center"></p>
+</span>
+<span id="PL2" ><img src = "images/Konrad.png" class="hoverable">
+<p id = "textPL2" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImageUS">
+<span id="US1" ><img src="images/Agnes.png" class="hoverable">
+<p id = "textUS1" align="center"></p>
+</span>
+<span id="US2" ><img src = "images/Henry.png" class="hoverable">
+<p id = "textUS2" align="center"></p>
+</span>
+<span id="US3" ><img src = "images/Brian.png" class="hoverable">
+<p id = "textUS3" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImagePK">
+<span id="PK1" ><img src="images/Asfand.png" class="hoverable">
+<p id = "textPK1" align="center"></p>
+</span>
+<span id="PK2" ><img src = "images/Haider.png" class="hoverable">
+<p id = "textPK2" align="center"></p>
+</span>
+<span id="PK3" ><img src = "images/Zainab.png" class="hoverable">
+<p id = "textPK3" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImageKR">
+<span id="KR1" ><img src="images/Eric.png" class="hoverable">
+<p id = "textKR1" align="center"></p>
+</span>
+<!-- <span id="US2" ><img src = "images/Henry.png" class="hoverable">
+</span> -->
+</div>
+
+<div class= "popImage" id="popImageET">
+<span id="ET1" ><img src="images/Michael.png" class="hoverable">
+<p id = "textET1" align="center"></p>
+</span>
+<!-- <span id="US2" ><img src = "images/Henry.png" class="hoverable">
+</span> -->
+</div>
+
+<div class= "popImage" id="popImageTZ">
+<span id="TZ1" ><img src="images/Silva.png" class="hoverable">
+<p id = "textTZ1" align="center"></p>
+</span>
+<!-- <span id="US2" ><img src = "images/Henry.png" class="hoverable">
+</span> -->
+</div>
+
+<div class= "popImage" id="popImageRU">
+<span id="RU1" ><img src="images/Olesya.png" class="hoverable">
+<p id = "textRU1" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImageCN">
+<span id="CN1" ><img src="images/Olivia.png" class="hoverable">
+<p id = "textCN1" align="center"></p>
+</span>
+<span id="CN2" ><img src="images/Henry.png" class="hoverable">
+<p id = "textCN2" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImagePH">
+<span id="PH1" ><img src="images/Agnes.png" class="hoverable">
+<p id = "textPH1" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImageBR">
+<span id="BR1" ><img src="images/Konig.png" class="hoverable">
+<p id = "textBR1" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImageID">
+<span id="ID1" ><img src="images/Carlo.png" class="hoverable">
+<p id = "textID1" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImageMD">
+<span id="MD1" ><img src="images/Iulian.png" class="hoverable">
+<p id = "textMD1" align="center"></p>
+</span>
+</div>
+
+<div class= "popImage" id="popImageTW">
+<span id="TW1" ><img src="images/Konig.png" class="hoverable">
+<p id = "textTW1" align="center"></p>
+</span>
+</div>
+
+
+
+   <button id="button1">X</button>
+     <div id="player">
+       <video id="vid" width="100%" height="100%" controls >
+
+
+
+
+  </video>
+     </div>
+     
+</body>
+</html>
