@@ -12,28 +12,55 @@ svg {
 -o-transition: 0.5s -o-filter linear;
 }
 
-/*#blur {
-    background-color:white;
-}*/
-
-#start {
+.startImage {
     display: none;
-    top:40%;
-    left: 30%;
     position: absolute;
+    overflow: hidden;
 }
+
+#Eric {
+
+    top:50%;
+    left: 0%;
+    max-height:50%;
+}
+
+#Michael {
+    top:45%;
+    left: 70%;
+    max-height:55%;
+}
+
+#Asfand {
+    top:47%;
+    left:18%;
+    max-height:53%;
+}
+
+#Zainab {
+    top:51%;
+    left: 35%;
+    max-height:49%;
+}
+
+#Silva {
+    top:45%;
+    left: 50%;
+    max-height:55%;
+}
+
 
 #player {
     background-color: black;
     width: 90%;
-    height: 700px;
+    height: 90%;
     position:absolute;
     left: 5%;
     top: 5%;
     display: none;
     }
 
-    #closebutton {
+#closebutton {
     top:93%;
     left:47%;
     position:absolute;
@@ -89,8 +116,8 @@ svg {
 
 #button1{
     box-shadow: 2px 4px 0 2px rgba(0,0,0,0.1);
-    top:91%;
-    left:49%;
+    top:10%;
+    left:90%;
     font-size: 1em;
     line-height: 1.1em;
     color: #000000;
@@ -102,186 +129,44 @@ svg {
     position: absolute;
     opacity: 1;
     font-size: 16px;
-    font-family: "American Typewriter";
+    font-family: "HelveticaNeue-Light";
     color: gray;
     font-weight: bolder;
     display: none;
 }
 
-#textPL1 {
-    position: absolute;
+.videoText {
+     position: absolute;
     font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, "Lucida Grande", sans-serif; 
    font-weight: 150;
     color: white;
     top: 70%;
-    text-align: center;
 }
 
+
+
 #textPL2 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
     left: 50%;
 }
 
-#textET1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textCN1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
 #textCN2 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
     left: 52%;
 }
 
-#textKR1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textPK1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
 #textPK2 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
     left: 34%;
 }
 
 #textPK3 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
     left:68%;
 }
 
-#textPH1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textRU1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textTZ1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textUS1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
 #textUS2 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
     left: 34%;
 }
 #textUS3 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
     left: 67%;
-}
-
-#textBR1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textID1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textMD1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
-}
-
-#textTW1 {
-    position: absolute;
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   font-weight: 150;
-    color: white;
-    top: 70%;
 }
 
 .phantom {
@@ -291,33 +176,109 @@ svg {
     opacity:0;
 }
 
-.phantomVid {
-    width: 100%;
-    height:100%;
-    position: absolute;
-    opacity:0;
-}
+
 
 #blurbutton {
     position: absolute;
     display:none;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
     top: 90%;
     font-size: 40px;
     color:black;
-    left:27%;
+    left:40%;
+    margin: auto;
 }
 
 #guide {
+    top: 90%;
+    font-size: 2.5vw;
+    left:35%;
+    width:30%;
+}
+
+.start {
     position: absolute;
     display:none;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Arial, "Lucida Grande", sans-serif; 
     font-weight: 300;
-    top: 90%;
-    font-size: 40px;
     color:black;
-    left:45%;
+}
+
+#start1 {
+    display: none;
+    top:40%;
+    left: 30%;
+    width: 40%;
+    position: absolute;
+}
+
+#start2 {
+    top: 15%;
+    font-size: 3vw;
+    left:18%;
+    width: 64%;
+}
+
+#start3 {
+   
+    top: 30%;
+    font-size: 4vw;
+    left:25%;
+}
+
+#start4 {
+
+    top: 15%;
+    font-size: 4vw;
+    left:20%;
+}
+
+#start5 {
+
+    top: 15%;
+    font-size: 3.3vw;
+    left:15%;
+}
+
+#start6 {
+
+    top: 25%;
+    font-size: 2.5vw;
+    left:20%;
+}
+
+#start7 {
+
+    top: 32%;
+    font-size: 2.5vw;
+    left:25%;
+}
+
+
+#start8 {
+
+    top: 40%;
+    font-size: 4vw;
+    left:30%;
+}
+
+#start9 {
+
+    top: 20%;
+    left:10%;
+    width: 80%;
+    font-size: 3vw;
+    margin: auto;
+
+}
+
+#start10 {
+    top: 60%;
+    left:30%;
+    width: 40%;
+    font-size: 4vw;
+    margin: auto;
 }
 
 .popImage {
@@ -332,13 +293,6 @@ svg {
 .jvectormap-zoomin, .jvectormap-zoomout {
     width: 10px;
     height: 10px;
-}
-
-.slider {
-    overflow: hidden;
-    position: relative;
-    -ms-touch-action: pan-y;
-    touch-action: pan-y;
 }
 
 .jvectormap-zoomin {
