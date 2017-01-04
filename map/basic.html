@@ -46,6 +46,8 @@
   <script src="assets/jquery-jvectormap-world-mill-en.js"></script>
   <script>
 
+
+
     $(document).ready(function() {
       
     $("#start1").fadeIn(2000);
@@ -84,11 +86,11 @@
 
 $(document).ready(function() {
   $("#map1").delay(24000).fadeIn(200);
-  $("#map1").css({"-webkit-filter" : "blur(5px)"});
+ // $("#map1").css({"-webkit-filter" : "blur(5px)"});
 // });
 
 // $(document).ready(function() {
-$(".phantom").fadeIn(200);
+//$(".phantom").fadeIn(200);
 // $("#blurbutton").delay(24000).fadeIn(200).css({"display" : "inline-block"});
 $("#guide").delay(24000).fadeIn(200);
 $("#start9").delay(20000).fadeIn(200);
@@ -97,12 +99,12 @@ $("#start9").delay(4000).fadeOut(200);
 $("#start10").delay(4000).fadeOut(200);
 
 $('.phantom').click(function(){
-      $('.popImage').fadeOut();
-      $(this).fadeOut();
-      $("#blurbutton").fadeOut();
-      $("#start9").fadeOut();
+     $('.popImage').fadeOut();
+       $(this).fadeOut();
+    $("#blurbutton").fadeOut();
+     $("#start9").fadeOut();
       $("#start10").fadeOut();
-      $("#map1").css({"-webkit-filter" : "blur(0px)"});
+   $("#map1").css({"-webkit-filter" : "blur(0px)"});
       $("#guide").fadeIn(200);
       $("#guide").css({"display" : "inline-block"});
     });
@@ -286,11 +288,12 @@ if (code === 'TW') {
 
   $("#button1").click(function() {
     $("#guide").fadeIn();
-      $("#player").fadeOut();
+      $("#frame").fadeOut();
       $(this).fadeOut();
       $(".popImage").hide();
       $(".phantom").hide();
-      $("#vid")[0].pause();
+      $("#player").fadeOut();
+      player.stopVideo();
 
     });
     })
@@ -300,164 +303,11 @@ setTimeout(showMap, 25000);
 
 $(document).ready(function() {
 
-$('.popImage').click(function () {
-  $("#guide").fadeOut();
-});
-
-$('#PL1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="videos/Gabriela Naumnik from Poland.mp4" type="video/mp4"></source>');
-      $("#vid")[0].load();
-       $("#vid")[0].play();
-});
-
-$('#PL2').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=CKvHgrQwtzI"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
 
 
-$('#US1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=yjrnX8GFI-k"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
+   // 2. This code loads the IFrame frame API code asynchronously.
 
-$('#US2').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=0zKVj6i7W5E"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
 
-$('#US3').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="videos/Brian Leichus from United States.mp4" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#PK1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="videos/Asfand Yar Khan Tareen.mp4" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#PK2').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=kxNXpmXjn4k"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#PK3').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=6Immih4_R08"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#KR1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=CIKdg4O4ZM4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#ET1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=bk-vHAk1qGg" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#TZ1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=GLoa_kH1OdA" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#CN1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=yDdzOiLeX_E"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#CN2').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=VKdYf7qQX3w" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#RU1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=98367a1neds" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#PH1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/watch?v=T6rU5Pok4Ww" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-//new ones
-
-$('#BR1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="videos/Konig Chen from Brazil.mp4" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#ID1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="videos/Carlo Gabriel from Indonesia.mp4" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
-
-$('#MD1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="https://www.youtube.com/embed/_ubJAv17uY0" frameborder="0" allowfullscreen>');
-      // $("#vid")[0].load();
-      // $("#vid")[0].play();
-});
-
-$('#TW1').click(function () {
-    $("#button1").fadeIn();
-    $('#player').fadeIn();
-    $("#vid").html('<source src="videos/Konig Chen from Taiwan.mp4" type="video/mp4"></source>');
-      $("#vid")[0].load();
-      $("#vid")[0].play();
-});
 
 
 
@@ -489,7 +339,7 @@ $(".hoverable").hover(function() {
     $("#textUS3").text("BRIAN FROM USA");
     $("#textMD1").text("IULIAN FROM MOLDOVA");
 
-    $("#start2").text("Our beauty standards are more and more stringent for men and women,");
+    $("#start2").text("Our beauty standards are more and more restrictive for men and women,");
     $("#start3").text("especially regarding skin color.");
     $("#start4").text("This is not just a matter of beauty.");
     $("#start5").text("Skin tone can affects a person's chances of:");
@@ -506,6 +356,7 @@ $(".hoverable").hover(function() {
   </script>
 </head>
 <body>
+
 
 
 <img src="SKINP.png" id="start1">
@@ -526,7 +377,7 @@ $(".hoverable").hover(function() {
 
         <div class="phantom"></div>
  <div id="wrapper" style="text-align: center">  
-    <div class="start" id="blurbutton">click to see videos</div>
+
     <div class="start" id="guide">click on a country to watch</div>
     <div class="start" id="start9"></div>
 <div class="start" id="start10"></div>
@@ -640,14 +491,263 @@ $(".hoverable").hover(function() {
 </span>
 </div>
 
+        <button id="button1">X</button>
+
+     <div id="frame">
+
+<div id="player"></div>
 
 
-     <div id="player">
-       <iframe id="vid" width="100%" height="100%"  >
-  </iframe>
+
+<!--        <iframe id="vid" width="100%" height="100%" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/CKvHgrQwtzI">
+  </iframe> -->
      </div>
 
-        <button id="button1">X</button>
+     <script>
+ // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+          }
+        });
+      }
+
+      // 4. The API will call this function when the video player is ready.
+      function onPlayerReady(event) {
+        event.target.playVideo();
+      }
+
+      // 5. The API calls this function when the player's state changes.
+      //    The function indicates that when playing a video (state=1),
+      //    the player should play for six seconds and then stop.
+      var done = false;
+      function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.PLAYING && !done) {
+          setTimeout(stopVideo, 6000);
+          done = true;
+        }
+      }
+      function stopVideo() {
+        player.stopVideo();
+      }
+
+function myFunction() {
+    player.loadVideoById("Vw4KVoEVcr0", 0, "default");
+}
+
+$('.popImage').click(function () {
+  $("#guide").fadeOut();
+});
+
+$('#PL1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $("#vid").html('<source src="videos/Gabriela Naumnik from Poland.mp4" type="video/mp4"></source>');
+      $("#vid")[0].load();
+       $("#vid")[0].play();
+});
+
+$('#PL2').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+    player.loadVideoById("CKvHgrQwtzI", 0, "large");
+    // $("#vid").src="https://www.youtube.com/embed/CKvHgrQwtzI";
+    //     $('#vid').fadeIn();
+      // $("#vid")[0].load();
+      // $("#vid")[0].play();
+});
+
+
+$('#US1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+    player.loadVideoById("yjrnX8GFI-k", 0, "large");
+
+});
+
+$('#US2').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+    player.loadVideoById("0zKVj6i7W5E", 0, "large");
+});
+
+$('#US3').click(function () {
+    // $("#button1").fadeIn();
+    // $('#frame').fadeIn();
+    // $("#vid").html('<source src="videos/Brian Leichus from United States.mp4" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#PK1').click(function () {
+    // $("#button1").fadeIn();
+    // $('#frame').fadeIn();
+    // $("#vid").html('<source src="videos/Asfand Yar Khan Tareen.mp4" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#PK2').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+        player.loadVideoById("kxNXpmXjn4k", 0, "large");
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=kxNXpmXjn4k"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#PK3').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+            player.loadVideoById("6Immih4_R08", 0, "large");
+
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=6Immih4_R08"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#KR1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+    player.loadVideoById("CIKdg4O4ZM4", 0, "large");
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=CIKdg4O4ZM4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#ET1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+        player.loadVideoById("bk-vHAk1qGg", 0, "large");
+
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=bk-vHAk1qGg" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#TZ1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+    player.loadVideoById("GLoa_kH1OdA", 0, "large");
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=GLoa_kH1OdA" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#CN1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+    player.loadVideoById("yDdzOiLeX_E", 0, "large");
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=yDdzOiLeX_E"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#CN2').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+    player.loadVideoById("VKdYf7qQX3w", 0, "large");
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=VKdYf7qQX3w" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#RU1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+        player.loadVideoById("98367a1neds", 0, "large");
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=98367a1neds" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#PH1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+    player.loadVideoById("T6rU5Pok4Ww", 0, "large");
+    // $("#vid").html('<source src="https://www.youtube.com/watch?v=T6rU5Pok4Ww" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+//new ones
+
+$('#BR1').click(function () {
+    // $("#button1").fadeIn();
+    // $('#frame').fadeIn();
+    // $("#vid").html('<source src="videos/Konig Chen from Brazil.mp4" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#ID1').click(function () {
+    // $("#button1").fadeIn();
+    // $('#frame').fadeIn();
+    // $("#vid").html('<source src="videos/Carlo Gabriel from Indonesia.mp4" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+$('#MD1').click(function () {
+    $("#button1").fadeIn();
+    $('#frame').fadeIn();
+    $('#player').fadeIn();
+
+    player.loadVideoById("_ubJAv17uY0", 0, "large");
+
+   // $("#vid").src="https://www.youtube.com/embed/_ubJAv17uY0";
+      // $("#vid")[0].load();
+      // $("#vid")[0].play();
+});
+
+$('#TW1').click(function () {
+    // $("#button1").fadeIn();
+    // $('#frame').fadeIn();
+    // $("#vid").html('<source src="videos/Konig Chen from Taiwan.mp4" type="video/mp4"></source>');
+    //   $("#vid")[0].load();
+    //   $("#vid")[0].play();
+});
+
+
+     </script>
+
+
 
 </body>
 </html>
