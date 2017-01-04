@@ -528,7 +528,7 @@ $(".hoverable").hover(function() {
 
       // 4. The API will call this function when the video player is ready.
       function onPlayerReady(event) {
-       // event.target.playVideo();
+        event.target.playVideo();
       }
 
       // 5. The API calls this function when the player's state changes.
@@ -538,6 +538,7 @@ $(".hoverable").hover(function() {
       function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.PLAYING && !done) {
           setTimeout(stopVideo, 0);
+          //player.setVolume(currentVolume - 10);
           done = true;
         }
       }
@@ -546,7 +547,7 @@ $(".hoverable").hover(function() {
       }
 
 function myFunction() {
-    //player.loadVideoById("Vw4KVoEVcr0", 0, "default");
+   // player.loadVideoById("8r31DFrFs5A", 0, "default");
 }
 
 $('.popImage').click(function () {
